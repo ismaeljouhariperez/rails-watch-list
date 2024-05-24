@@ -1,0 +1,12 @@
+<nav class="navbar h-100 d-flex flex-column align-items-start justify-content-between p-4">
+    <%= image_tag('logo/logo.svg', alt: 'MovieWatch logo', class: 'logo')  %>
+    <ul class="list-group">
+      <li class="list-group-item active" aria-current="true">Home</li>
+      <li class="list-group-item">Library</li>
+      <li class="list-group-item">Friends</li>
+    </ul>
+    <div class="d-flex flex-column" role="search">
+      <%= link_to 'My lists', lists_path, class: "btn btn-primary" %>
+      <%= link_to 'New List', new_list_path, class: "my-3 btn btn-outline-primary" %>
+    </div>
+</nav>
