@@ -1,12 +1,19 @@
-<nav class="navbar h-100 d-flex flex-column align-items-start justify-content-between p-4">
+<nav class="navbar h-100 d-flex flex-column align-items-start justify-content-between p-5">
     <%= image_tag('logo/logo.svg', alt: 'MovieWatch logo', class: 'logo')  %>
+    <div class="input-search-group form-control border-radius bg-none p-0 m-0 d-flex w-75">
+      <div class="input-search-group-prepend d-flex>">
+        <%= image_tag('icons/sidebar/search.svg', alt: 'User icon', class: 'py-2 px-2', id: 'basic-addon1') %>
+        </span>
+      </div>
+      <input type="text" class="w-75 d-flex text-white " placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
     <ul class="list-group">
       <li class="list-group-item active" aria-current="true">Home</li>
       <li class="list-group-item">Library</li>
       <li class="list-group-item">Friends</li>
     </ul>
     <div class="d-flex flex-column" role="search">
-      <%= link_to 'My lists', lists_path, class: "btn btn-primary" %>
+      <%= link_to 'My lists', root_path, class: "btn btn-primary" %>
       <%= link_to 'New List', new_list_path, class: "my-3 btn btn-outline-primary" %>
     </div>
 </nav>
